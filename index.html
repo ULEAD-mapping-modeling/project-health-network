@@ -8,6 +8,7 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="stylesheet" href="css/leaflet.css">
         <link rel="stylesheet" href="css/qgis2web.css">
+        <link rel="stylesheet" href="css/Control.OSMGeocoder.css">
         <style>
         html, body, #map {
             width: 100%;
@@ -31,16 +32,17 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
+        <script src="js/Control.OSMGeocoder.js"></script>
         <script src="data/Temporarilyoccupiedterritories_0.js"></script>
         <script src="data/TerritoryofAmmalgamedCommunity_1.js"></script>
         <script src="data/Rayonboundary_2.js"></script>
         <script src="data/Oblastboundary_3.js"></script>
-        <script src="data/Subventionin2019_4.js"></script>
-        <script src="data/Subventionin2018_5.js"></script>
+        <script src="data/Subventionin2019401_4.js"></script>
+        <script src="data/Subventionin2018310_5.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:14, minZoom:6
-        }).fitBounds([[42.9611294929,19.2889586949],[53.5883871353,48.6391791589]]);
+        }).fitBounds([[45.119861549,26.8537907448],[50.502015924,40.2686000905]]);
         var hash = new L.Hash(map);
         map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
         var bounds_group = new L.featureGroup([]);
@@ -159,22 +161,18 @@
         });
         bounds_group.addLayer(layer_Oblastboundary_3);
         map.addLayer(layer_Oblastboundary_3);
-        function pop_Subventionin2019_4(feature, layer) {
+        function pop_Subventionin2019401_4(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">name</th>\
-                        <td>' + (feature.properties['name'] !== null ? Autolinker.link(String(feature.properties['name'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2"><strong>PMD_type</strong><br />' + (feature.properties['PMD_type'] !== null ? Autolinker.link(String(feature.properties['PMD_type'])) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['name'] !== null ? Autolinker.link(String(feature.properties['name'])) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_Subventionin2019_4_0() {
+        function style_Subventionin2019401_4_0() {
             return {
-                pane: 'pane_Subventionin2019_4',
+                pane: 'pane_Subventionin2019401_4',
                 radius: 3.2,
                 stroke: false,
                 fill: true,
@@ -182,9 +180,9 @@
                 fillColor: 'rgba(189,203,33,0.0)',
             }
         }
-        function style_Subventionin2019_4_1() {
+        function style_Subventionin2019401_4_1() {
             return {
-                pane: 'pane_Subventionin2019_4',
+                pane: 'pane_Subventionin2019401_4',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
@@ -197,9 +195,9 @@
                 fillColor: 'rgba(0,0,0,1.0)',
             }
         }
-        function style_Subventionin2019_4_2() {
+        function style_Subventionin2019401_4_2() {
             return {
-                pane: 'pane_Subventionin2019_4',
+                pane: 'pane_Subventionin2019401_4',
                 radius: 3.0,
                 stroke: false,
                 fill: true,
@@ -207,52 +205,47 @@
                 fillColor: 'rgba(255,251,0,1.0)',
             }
         }
-        map.createPane('pane_Subventionin2019_4');
-        map.getPane('pane_Subventionin2019_4').style.zIndex = 404;
-        map.getPane('pane_Subventionin2019_4').style['mix-blend-mode'] = 'normal';
-        var layer_Subventionin2019_4 = new L.geoJson.multiStyle(json_Subventionin2019_4, {
+        map.createPane('pane_Subventionin2019401_4');
+        map.getPane('pane_Subventionin2019401_4').style.zIndex = 404;
+        map.getPane('pane_Subventionin2019401_4').style['mix-blend-mode'] = 'normal';
+        var layer_Subventionin2019401_4 = new L.geoJson.multiStyle(json_Subventionin2019401_4, {
             attribution: '<a href=""></a>',
-            pane: 'pane_Subventionin2019_4',
-            onEachFeature: pop_Subventionin2019_4,
+            pane: 'pane_Subventionin2019401_4',
+            onEachFeature: pop_Subventionin2019401_4,
             pointToLayers: [function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Subventionin2019_4_0(feature));
+                return L.circleMarker(latlng, style_Subventionin2019401_4_0(feature));
             },function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Subventionin2019_4_1(feature));
+                return L.circleMarker(latlng, style_Subventionin2019401_4_1(feature));
             },function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Subventionin2019_4_2(feature));
+                return L.circleMarker(latlng, style_Subventionin2019401_4_2(feature));
             },
         ]});
-        bounds_group.addLayer(layer_Subventionin2019_4);
-        map.addLayer(layer_Subventionin2019_4);
-        function pop_Subventionin2018_5(feature, layer) {
+        bounds_group.addLayer(layer_Subventionin2019401_4);
+        map.addLayer(layer_Subventionin2019401_4);
+        function pop_Subventionin2018310_5(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">name</th>\
-                        <td>' + (feature.properties['name'] !== null ? Autolinker.link(String(feature.properties['name'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">PMD_type</th>\
-                        <td>' + (feature.properties['PMD_type'] !== null ? Autolinker.link(String(feature.properties['PMD_type'])) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['csv_1'] !== null ? Autolinker.link(String(feature.properties['csv_1'])) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_Subventionin2018_5_0() {
+        function style_Subventionin2018310_5_0() {
             return {
-                pane: 'pane_Subventionin2018_5',
+                pane: 'pane_Subventionin2018310_5',
                 radius: 3.2,
                 stroke: false,
                 fill: true,
@@ -260,9 +253,9 @@
                 fillColor: 'rgba(189,203,33,0.0)',
             }
         }
-        function style_Subventionin2018_5_1() {
+        function style_Subventionin2018310_5_1() {
             return {
-                pane: 'pane_Subventionin2018_5',
+                pane: 'pane_Subventionin2018310_5',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
@@ -275,47 +268,53 @@
                 fillColor: 'rgba(0,0,0,1.0)',
             }
         }
-        function style_Subventionin2018_5_2() {
+        function style_Subventionin2018310_5_2() {
             return {
-                pane: 'pane_Subventionin2018_5',
+                pane: 'pane_Subventionin2018310_5',
                 radius: 3.0,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(1,255,43,1.0)',
+                fillColor: 'rgba(1,255,47,1.0)',
             }
         }
-        map.createPane('pane_Subventionin2018_5');
-        map.getPane('pane_Subventionin2018_5').style.zIndex = 405;
-        map.getPane('pane_Subventionin2018_5').style['mix-blend-mode'] = 'normal';
-        var layer_Subventionin2018_5 = new L.geoJson.multiStyle(json_Subventionin2018_5, {
+        map.createPane('pane_Subventionin2018310_5');
+        map.getPane('pane_Subventionin2018310_5').style.zIndex = 405;
+        map.getPane('pane_Subventionin2018310_5').style['mix-blend-mode'] = 'normal';
+        var layer_Subventionin2018310_5 = new L.geoJson.multiStyle(json_Subventionin2018310_5, {
             attribution: '<a href=""></a>',
-            pane: 'pane_Subventionin2018_5',
-            onEachFeature: pop_Subventionin2018_5,
+            pane: 'pane_Subventionin2018310_5',
+            onEachFeature: pop_Subventionin2018310_5,
             pointToLayers: [function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Subventionin2018_5_0(feature));
+                return L.circleMarker(latlng, style_Subventionin2018310_5_0(feature));
             },function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Subventionin2018_5_1(feature));
+                return L.circleMarker(latlng, style_Subventionin2018310_5_1(feature));
             },function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Subventionin2018_5_2(feature));
+                return L.circleMarker(latlng, style_Subventionin2018310_5_2(feature));
             },
         ]});
-        bounds_group.addLayer(layer_Subventionin2018_5);
-        map.addLayer(layer_Subventionin2018_5);
+        bounds_group.addLayer(layer_Subventionin2018310_5);
+        map.addLayer(layer_Subventionin2018310_5);
+        var osmGeocoder = new L.Control.OSMGeocoder({
+            collapsed: false,
+            position: 'topright',
+            text: 'Search',
+        });
+        osmGeocoder.addTo(map);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/Subventionin2018_5.png" /> Subvention in 2018': layer_Subventionin2018_5,'<img src="legend/Subventionin2019_4.png" /> Subvention in 2019': layer_Subventionin2019_4,'<img src="legend/Oblastboundary_3.png" /> Oblast boundary': layer_Oblastboundary_3,'<img src="legend/Rayonboundary_2.png" /> Rayon boundary': layer_Rayonboundary_2,'<img src="legend/TerritoryofAmmalgamedCommunity_1.png" /> Territory of Ammalgamed Community': layer_TerritoryofAmmalgamedCommunity_1,'<img src="legend/Temporarilyoccupiedterritories_0.png" /> Temporarily occupied territories': layer_Temporarilyoccupiedterritories_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/Subventionin2018310_5.png" /> Subvention in 2018 (310)': layer_Subventionin2018310_5,'<img src="legend/Subventionin2019401_4.png" /> Subvention in 2019 (401)': layer_Subventionin2019401_4,'<img src="legend/Oblastboundary_3.png" /> Oblast boundary': layer_Oblastboundary_3,'<img src="legend/Rayonboundary_2.png" /> Rayon boundary': layer_Rayonboundary_2,'<img src="legend/TerritoryofAmmalgamedCommunity_1.png" /> Territory of Ammalgamed Community': layer_TerritoryofAmmalgamedCommunity_1,'<img src="legend/Temporarilyoccupiedterritories_0.png" /> Temporarily occupied territories': layer_Temporarilyoccupiedterritories_0,},{collapsed:false}).addTo(map);
         setBounds();
         </script>
     </body>
