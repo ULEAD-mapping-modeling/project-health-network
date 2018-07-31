@@ -41,17 +41,20 @@
         <script src="data/Subventionin2018310_5.js"></script>
         <script>
         var map = L.map('map', {
-            zoomControl:true, maxZoom:14, minZoom:6
-        }).fitBounds([[45.119861549,26.8537907448],[50.502015924,40.2686000905]]);
+            zoomControl:true, maxZoom:13, minZoom:6
+        })
         var hash = new L.Hash(map);
         map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
         var bounds_group = new L.featureGroup([]);
         var basemap0 = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-            maxZoom: 14
+            maxZoom: 13
         });
         basemap0.addTo(map);
         function setBounds() {
+            if (bounds_group.getLayers().length) {
+                map.fitBounds(bounds_group.getBounds());
+            }
         }
         function pop_Temporarilyoccupiedterritories_0(feature, layer) {
         }
@@ -246,7 +249,7 @@
         function style_Subventionin2018310_5_0() {
             return {
                 pane: 'pane_Subventionin2018310_5',
-                radius: 3.2,
+                radius: 8.0,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
