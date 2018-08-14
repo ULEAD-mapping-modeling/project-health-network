@@ -33,12 +33,12 @@
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
         <script src="js/Control.OSMGeocoder.js"></script>
-        <script src="data/Temporarilyoccupiedterritories_1.js"></script>
-        <script src="data/TerritoryofAmmalgamedCommunity_2.js"></script>
-        <script src="data/Rayonboundary_3.js"></script>
-        <script src="data/Oblastboundary_4.js"></script>
-        <script src="data/Subventionin2019401_5.js"></script>
-        <script src="data/Subventionin2018310_6.js"></script>
+        <script src="data/Temporarilyoccupiedterritories_0.js"></script>
+        <script src="data/TerritoryofAmmalgamedCommunity_1.js"></script>
+        <script src="data/Rayonboundary_2.js"></script>
+        <script src="data/Oblastboundary_3.js"></script>
+        <script src="data/Projecthealthnetwork_4.js"></script>
+        <script src="data/Subventionin2018379_5.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:13, minZoom:6
@@ -56,17 +56,12 @@
                 map.fitBounds(bounds_group.getBounds());
             }
         }
-        var overlay_OSMStandard_0 = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            opacity: 1.0
-        });
-        overlay_OSMStandard_0.addTo(map);
-        map.addLayer(overlay_OSMStandard_0);
-        function pop_Temporarilyoccupiedterritories_1(feature, layer) {
+        function pop_Temporarilyoccupiedterritories_0(feature, layer) {
         }
 
-        function style_Temporarilyoccupiedterritories_1_0() {
+        function style_Temporarilyoccupiedterritories_0_0() {
             return {
-                pane: 'pane_Temporarilyoccupiedterritories_1',
+                pane: 'pane_Temporarilyoccupiedterritories_0',
                 opacity: 1,
                 color: 'rgba(121,121,121,1.0)',
                 dashArray: '1,5',
@@ -78,23 +73,23 @@
                 fillColor: 'rgba(170,170,170,0.250980392157)',
             }
         }
-        map.createPane('pane_Temporarilyoccupiedterritories_1');
-        map.getPane('pane_Temporarilyoccupiedterritories_1').style.zIndex = 401;
-        map.getPane('pane_Temporarilyoccupiedterritories_1').style['mix-blend-mode'] = 'normal';
-        var layer_Temporarilyoccupiedterritories_1 = new L.geoJson(json_Temporarilyoccupiedterritories_1, {
+        map.createPane('pane_Temporarilyoccupiedterritories_0');
+        map.getPane('pane_Temporarilyoccupiedterritories_0').style.zIndex = 400;
+        map.getPane('pane_Temporarilyoccupiedterritories_0').style['mix-blend-mode'] = 'normal';
+        var layer_Temporarilyoccupiedterritories_0 = new L.geoJson(json_Temporarilyoccupiedterritories_0, {
             attribution: '<a href=""></a>',
-            pane: 'pane_Temporarilyoccupiedterritories_1',
-            onEachFeature: pop_Temporarilyoccupiedterritories_1,
-            style: style_Temporarilyoccupiedterritories_1_0,
+            pane: 'pane_Temporarilyoccupiedterritories_0',
+            onEachFeature: pop_Temporarilyoccupiedterritories_0,
+            style: style_Temporarilyoccupiedterritories_0_0,
         });
-        bounds_group.addLayer(layer_Temporarilyoccupiedterritories_1);
-        map.addLayer(layer_Temporarilyoccupiedterritories_1);
-        function pop_TerritoryofAmmalgamedCommunity_2(feature, layer) {
+        bounds_group.addLayer(layer_Temporarilyoccupiedterritories_0);
+        map.addLayer(layer_Temporarilyoccupiedterritories_0);
+        function pop_TerritoryofAmmalgamedCommunity_1(feature, layer) {
         }
 
-        function style_TerritoryofAmmalgamedCommunity_2_0() {
+        function style_TerritoryofAmmalgamedCommunity_1_0() {
             return {
-                pane: 'pane_TerritoryofAmmalgamedCommunity_2',
+                pane: 'pane_TerritoryofAmmalgamedCommunity_1',
                 opacity: 1,
                 color: 'rgba(147,147,147,1.0)',
                 dashArray: '',
@@ -106,23 +101,23 @@
                 fillColor: 'rgba(105,195,255,0.250980392157)',
             }
         }
-        map.createPane('pane_TerritoryofAmmalgamedCommunity_2');
-        map.getPane('pane_TerritoryofAmmalgamedCommunity_2').style.zIndex = 402;
-        map.getPane('pane_TerritoryofAmmalgamedCommunity_2').style['mix-blend-mode'] = 'normal';
-        var layer_TerritoryofAmmalgamedCommunity_2 = new L.geoJson(json_TerritoryofAmmalgamedCommunity_2, {
+        map.createPane('pane_TerritoryofAmmalgamedCommunity_1');
+        map.getPane('pane_TerritoryofAmmalgamedCommunity_1').style.zIndex = 401;
+        map.getPane('pane_TerritoryofAmmalgamedCommunity_1').style['mix-blend-mode'] = 'normal';
+        var layer_TerritoryofAmmalgamedCommunity_1 = new L.geoJson(json_TerritoryofAmmalgamedCommunity_1, {
             attribution: '<a href=""></a>',
-            pane: 'pane_TerritoryofAmmalgamedCommunity_2',
-            onEachFeature: pop_TerritoryofAmmalgamedCommunity_2,
-            style: style_TerritoryofAmmalgamedCommunity_2_0,
+            pane: 'pane_TerritoryofAmmalgamedCommunity_1',
+            onEachFeature: pop_TerritoryofAmmalgamedCommunity_1,
+            style: style_TerritoryofAmmalgamedCommunity_1_0,
         });
-        bounds_group.addLayer(layer_TerritoryofAmmalgamedCommunity_2);
-        map.addLayer(layer_TerritoryofAmmalgamedCommunity_2);
-        function pop_Rayonboundary_3(feature, layer) {
+        bounds_group.addLayer(layer_TerritoryofAmmalgamedCommunity_1);
+        map.addLayer(layer_TerritoryofAmmalgamedCommunity_1);
+        function pop_Rayonboundary_2(feature, layer) {
         }
 
-        function style_Rayonboundary_3_0() {
+        function style_Rayonboundary_2_0() {
             return {
-                pane: 'pane_Rayonboundary_3',
+                pane: 'pane_Rayonboundary_2',
                 opacity: 1,
                 color: 'rgba(147,147,147,1.0)',
                 dashArray: '',
@@ -132,23 +127,23 @@
                 fillOpacity: 0,
             }
         }
-        map.createPane('pane_Rayonboundary_3');
-        map.getPane('pane_Rayonboundary_3').style.zIndex = 403;
-        map.getPane('pane_Rayonboundary_3').style['mix-blend-mode'] = 'normal';
-        var layer_Rayonboundary_3 = new L.geoJson(json_Rayonboundary_3, {
+        map.createPane('pane_Rayonboundary_2');
+        map.getPane('pane_Rayonboundary_2').style.zIndex = 402;
+        map.getPane('pane_Rayonboundary_2').style['mix-blend-mode'] = 'normal';
+        var layer_Rayonboundary_2 = new L.geoJson(json_Rayonboundary_2, {
             attribution: '<a href=""></a>',
-            pane: 'pane_Rayonboundary_3',
-            onEachFeature: pop_Rayonboundary_3,
-            style: style_Rayonboundary_3_0,
+            pane: 'pane_Rayonboundary_2',
+            onEachFeature: pop_Rayonboundary_2,
+            style: style_Rayonboundary_2_0,
         });
-        bounds_group.addLayer(layer_Rayonboundary_3);
-        map.addLayer(layer_Rayonboundary_3);
-        function pop_Oblastboundary_4(feature, layer) {
+        bounds_group.addLayer(layer_Rayonboundary_2);
+        map.addLayer(layer_Rayonboundary_2);
+        function pop_Oblastboundary_3(feature, layer) {
         }
 
-        function style_Oblastboundary_4_0() {
+        function style_Oblastboundary_3_0() {
             return {
-                pane: 'pane_Oblastboundary_4',
+                pane: 'pane_Oblastboundary_3',
                 opacity: 1,
                 color: 'rgba(255,39,1,1.0)',
                 dashArray: '',
@@ -158,18 +153,18 @@
                 fillOpacity: 0,
             }
         }
-        map.createPane('pane_Oblastboundary_4');
-        map.getPane('pane_Oblastboundary_4').style.zIndex = 404;
-        map.getPane('pane_Oblastboundary_4').style['mix-blend-mode'] = 'normal';
-        var layer_Oblastboundary_4 = new L.geoJson(json_Oblastboundary_4, {
+        map.createPane('pane_Oblastboundary_3');
+        map.getPane('pane_Oblastboundary_3').style.zIndex = 403;
+        map.getPane('pane_Oblastboundary_3').style['mix-blend-mode'] = 'normal';
+        var layer_Oblastboundary_3 = new L.geoJson(json_Oblastboundary_3, {
             attribution: '<a href=""></a>',
-            pane: 'pane_Oblastboundary_4',
-            onEachFeature: pop_Oblastboundary_4,
-            style: style_Oblastboundary_4_0,
+            pane: 'pane_Oblastboundary_3',
+            onEachFeature: pop_Oblastboundary_3,
+            style: style_Oblastboundary_3_0,
         });
-        bounds_group.addLayer(layer_Oblastboundary_4);
-        map.addLayer(layer_Oblastboundary_4);
-        function pop_Subventionin2019401_5(feature, layer) {
+        bounds_group.addLayer(layer_Oblastboundary_3);
+        map.addLayer(layer_Oblastboundary_3);
+        function pop_Projecthealthnetwork_4(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['name'] !== null ? Autolinker.link(String(feature.properties['name'])) : '') + '</td>\
@@ -178,9 +173,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_Subventionin2019401_5_0() {
+        function style_Projecthealthnetwork_4_0() {
             return {
-                pane: 'pane_Subventionin2019401_5',
+                pane: 'pane_Projecthealthnetwork_4',
                 radius: 3.2,
                 stroke: false,
                 fill: true,
@@ -188,10 +183,10 @@
                 fillColor: 'rgba(189,203,33,0.0)',
             }
         }
-        function style_Subventionin2019401_5_1() {
+        function style_Projecthealthnetwork_4_1() {
             return {
-                pane: 'pane_Subventionin2019401_5',
-                radius: 4.0,
+                pane: 'pane_Projecthealthnetwork_4',
+                radius: 5.0,
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
@@ -203,46 +198,46 @@
                 fillColor: 'rgba(0,0,0,1.0)',
             }
         }
-        function style_Subventionin2019401_5_2() {
+        function style_Projecthealthnetwork_4_2() {
             return {
-                pane: 'pane_Subventionin2019401_5',
-                radius: 3.0,
+                pane: 'pane_Projecthealthnetwork_4',
+                radius: 4.0,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(255,251,0,1.0)',
             }
         }
-        map.createPane('pane_Subventionin2019401_5');
-        map.getPane('pane_Subventionin2019401_5').style.zIndex = 405;
-        map.getPane('pane_Subventionin2019401_5').style['mix-blend-mode'] = 'normal';
-        var layer_Subventionin2019401_5 = new L.geoJson.multiStyle(json_Subventionin2019401_5, {
+        map.createPane('pane_Projecthealthnetwork_4');
+        map.getPane('pane_Projecthealthnetwork_4').style.zIndex = 404;
+        map.getPane('pane_Projecthealthnetwork_4').style['mix-blend-mode'] = 'normal';
+        var layer_Projecthealthnetwork_4 = new L.geoJson.multiStyle(json_Projecthealthnetwork_4, {
             attribution: '<a href=""></a>',
-            pane: 'pane_Subventionin2019401_5',
-            onEachFeature: pop_Subventionin2019401_5,
+            pane: 'pane_Projecthealthnetwork_4',
+            onEachFeature: pop_Projecthealthnetwork_4,
             pointToLayers: [function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Subventionin2019401_5_0(feature));
+                return L.circleMarker(latlng, style_Projecthealthnetwork_4_0(feature));
             },function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Subventionin2019401_5_1(feature));
+                return L.circleMarker(latlng, style_Projecthealthnetwork_4_1(feature));
             },function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Subventionin2019401_5_2(feature));
+                return L.circleMarker(latlng, style_Projecthealthnetwork_4_2(feature));
             },
         ]});
-        bounds_group.addLayer(layer_Subventionin2019401_5);
-        map.addLayer(layer_Subventionin2019401_5);
-        function pop_Subventionin2018310_6(feature, layer) {
+        bounds_group.addLayer(layer_Projecthealthnetwork_4);
+        map.addLayer(layer_Projecthealthnetwork_4);
+        function pop_Subventionin2018379_5(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['csv_1'] !== null ? Autolinker.link(String(feature.properties['csv_1'])) : '') + '</td>\
@@ -251,9 +246,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_Subventionin2018310_6_0() {
+        function style_Subventionin2018379_5_0() {
             return {
-                pane: 'pane_Subventionin2018310_6',
+                pane: 'pane_Subventionin2018379_5',
                 radius: 8.0,
                 stroke: false,
                 fill: true,
@@ -261,10 +256,10 @@
                 fillColor: 'rgba(189,203,33,0.0)',
             }
         }
-        function style_Subventionin2018310_6_1() {
+        function style_Subventionin2018379_5_1() {
             return {
-                pane: 'pane_Subventionin2018310_6',
-                radius: 4.0,
+                pane: 'pane_Subventionin2018379_5',
+                radius: 5.0,
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
@@ -276,45 +271,45 @@
                 fillColor: 'rgba(0,0,0,1.0)',
             }
         }
-        function style_Subventionin2018310_6_2() {
+        function style_Subventionin2018379_5_2() {
             return {
-                pane: 'pane_Subventionin2018310_6',
-                radius: 3.0,
+                pane: 'pane_Subventionin2018379_5',
+                radius: 4.0,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(1,255,47,1.0)',
             }
         }
-        map.createPane('pane_Subventionin2018310_6');
-        map.getPane('pane_Subventionin2018310_6').style.zIndex = 406;
-        map.getPane('pane_Subventionin2018310_6').style['mix-blend-mode'] = 'normal';
-        var layer_Subventionin2018310_6 = new L.geoJson.multiStyle(json_Subventionin2018310_6, {
+        map.createPane('pane_Subventionin2018379_5');
+        map.getPane('pane_Subventionin2018379_5').style.zIndex = 405;
+        map.getPane('pane_Subventionin2018379_5').style['mix-blend-mode'] = 'normal';
+        var layer_Subventionin2018379_5 = new L.geoJson.multiStyle(json_Subventionin2018379_5, {
             attribution: '<a href=""></a>',
-            pane: 'pane_Subventionin2018310_6',
-            onEachFeature: pop_Subventionin2018310_6,
+            pane: 'pane_Subventionin2018379_5',
+            onEachFeature: pop_Subventionin2018379_5,
             pointToLayers: [function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Subventionin2018310_6_0(feature));
+                return L.circleMarker(latlng, style_Subventionin2018379_5_0(feature));
             },function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Subventionin2018310_6_1(feature));
+                return L.circleMarker(latlng, style_Subventionin2018379_5_1(feature));
             },function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Subventionin2018310_6_2(feature));
+                return L.circleMarker(latlng, style_Subventionin2018379_5_2(feature));
             },
         ]});
-        bounds_group.addLayer(layer_Subventionin2018310_6);
-        map.addLayer(layer_Subventionin2018310_6);
+        bounds_group.addLayer(layer_Subventionin2018379_5);
+        map.addLayer(layer_Subventionin2018379_5);
         var osmGeocoder = new L.Control.OSMGeocoder({
             collapsed: false,
             position: 'topright',
@@ -322,7 +317,7 @@
         });
         osmGeocoder.addTo(map);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/Subventionin2018310_6.png" /> Subvention in 2018 (310)': layer_Subventionin2018310_6,'<img src="legend/Subventionin2019401_5.png" /> Subvention in 2019 (401)': layer_Subventionin2019401_5,'<img src="legend/Oblastboundary_4.png" /> Oblast boundary': layer_Oblastboundary_4,'<img src="legend/Rayonboundary_3.png" /> Rayon boundary': layer_Rayonboundary_3,'<img src="legend/TerritoryofAmmalgamedCommunity_2.png" /> Territory of Ammalgamed Community': layer_TerritoryofAmmalgamedCommunity_2,'<img src="legend/Temporarilyoccupiedterritories_1.png" /> Temporarily occupied territories': layer_Temporarilyoccupiedterritories_1,"OSM Standard": overlay_OSMStandard_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/Subventionin2018379_5.png" /> Subvention in 2018 (379)': layer_Subventionin2018379_5,'<img src="legend/Projecthealthnetwork_4.png" /> Project health network': layer_Projecthealthnetwork_4,'<img src="legend/Oblastboundary_3.png" /> Oblast boundary': layer_Oblastboundary_3,'<img src="legend/Rayonboundary_2.png" /> Rayon boundary': layer_Rayonboundary_2,'<img src="legend/TerritoryofAmmalgamedCommunity_1.png" /> Territory of Ammalgamed Community': layer_TerritoryofAmmalgamedCommunity_1,'<img src="legend/Temporarilyoccupiedterritories_0.png" /> Temporarily occupied territories': layer_Temporarilyoccupiedterritories_0,},{collapsed:false}).addTo(map);
         setBounds();
         </script>
     </body>
