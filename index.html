@@ -38,7 +38,7 @@
         <script src="data/Rayonboundary_2.js"></script>
         <script src="data/Oblastboundary_3.js"></script>
         <script src="data/Projecthealthnetwork_4.js"></script>
-        <script src="data/Subventionin2018379_5.js"></script>
+        <script src="data/Subventionin2018413_5.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:13, minZoom:6
@@ -237,7 +237,7 @@
         ]});
         bounds_group.addLayer(layer_Projecthealthnetwork_4);
         map.addLayer(layer_Projecthealthnetwork_4);
-        function pop_Subventionin2018379_5(feature, layer) {
+        function pop_Subventionin2018413_5(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['csv_1'] !== null ? Autolinker.link(String(feature.properties['csv_1'])) : '') + '</td>\
@@ -246,9 +246,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_Subventionin2018379_5_0() {
+        function style_Subventionin2018413_5_0() {
             return {
-                pane: 'pane_Subventionin2018379_5',
+                pane: 'pane_Subventionin2018413_5',
                 radius: 8.0,
                 stroke: false,
                 fill: true,
@@ -256,9 +256,9 @@
                 fillColor: 'rgba(189,203,33,0.0)',
             }
         }
-        function style_Subventionin2018379_5_1() {
+        function style_Subventionin2018413_5_1() {
             return {
-                pane: 'pane_Subventionin2018379_5',
+                pane: 'pane_Subventionin2018413_5',
                 radius: 5.0,
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
@@ -271,9 +271,9 @@
                 fillColor: 'rgba(0,0,0,1.0)',
             }
         }
-        function style_Subventionin2018379_5_2() {
+        function style_Subventionin2018413_5_2() {
             return {
-                pane: 'pane_Subventionin2018379_5',
+                pane: 'pane_Subventionin2018413_5',
                 radius: 4.0,
                 stroke: false,
                 fill: true,
@@ -281,35 +281,35 @@
                 fillColor: 'rgba(1,255,47,1.0)',
             }
         }
-        map.createPane('pane_Subventionin2018379_5');
-        map.getPane('pane_Subventionin2018379_5').style.zIndex = 405;
-        map.getPane('pane_Subventionin2018379_5').style['mix-blend-mode'] = 'normal';
-        var layer_Subventionin2018379_5 = new L.geoJson.multiStyle(json_Subventionin2018379_5, {
+        map.createPane('pane_Subventionin2018413_5');
+        map.getPane('pane_Subventionin2018413_5').style.zIndex = 405;
+        map.getPane('pane_Subventionin2018413_5').style['mix-blend-mode'] = 'normal';
+        var layer_Subventionin2018413_5 = new L.geoJson.multiStyle(json_Subventionin2018413_5, {
             attribution: '<a href=""></a>',
-            pane: 'pane_Subventionin2018379_5',
-            onEachFeature: pop_Subventionin2018379_5,
+            pane: 'pane_Subventionin2018413_5',
+            onEachFeature: pop_Subventionin2018413_5,
             pointToLayers: [function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Subventionin2018379_5_0(feature));
+                return L.circleMarker(latlng, style_Subventionin2018413_5_0(feature));
             },function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Subventionin2018379_5_1(feature));
+                return L.circleMarker(latlng, style_Subventionin2018413_5_1(feature));
             },function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Subventionin2018379_5_2(feature));
+                return L.circleMarker(latlng, style_Subventionin2018413_5_2(feature));
             },
         ]});
-        bounds_group.addLayer(layer_Subventionin2018379_5);
-        map.addLayer(layer_Subventionin2018379_5);
+        bounds_group.addLayer(layer_Subventionin2018413_5);
+        map.addLayer(layer_Subventionin2018413_5);
         var osmGeocoder = new L.Control.OSMGeocoder({
             collapsed: false,
             position: 'topright',
@@ -317,7 +317,7 @@
         });
         osmGeocoder.addTo(map);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/Subventionin2018379_5.png" /> Subvention in 2018 (379)': layer_Subventionin2018379_5,'<img src="legend/Projecthealthnetwork_4.png" /> Project health network': layer_Projecthealthnetwork_4,'<img src="legend/Oblastboundary_3.png" /> Oblast boundary': layer_Oblastboundary_3,'<img src="legend/Rayonboundary_2.png" /> Rayon boundary': layer_Rayonboundary_2,'<img src="legend/TerritoryofAmmalgamedCommunity_1.png" /> Territory of Ammalgamed Community': layer_TerritoryofAmmalgamedCommunity_1,'<img src="legend/Temporarilyoccupiedterritories_0.png" /> Temporarily occupied territories': layer_Temporarilyoccupiedterritories_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/Subventionin2018413_5.png" /> Subvention in 2018 (413)': layer_Subventionin2018413_5,'<img src="legend/Projecthealthnetwork_4.png" /> Project health network': layer_Projecthealthnetwork_4,'<img src="legend/Oblastboundary_3.png" /> Oblast boundary': layer_Oblastboundary_3,'<img src="legend/Rayonboundary_2.png" /> Rayon boundary': layer_Rayonboundary_2,'<img src="legend/TerritoryofAmmalgamedCommunity_1.png" /> Territory of Ammalgamed Community': layer_TerritoryofAmmalgamedCommunity_1,'<img src="legend/Temporarilyoccupiedterritories_0.png" /> Temporarily occupied territories': layer_Temporarilyoccupiedterritories_0,},{collapsed:false}).addTo(map);
         setBounds();
         </script>
     </body>
